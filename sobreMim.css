@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+body {
+  background-color: black;
+  font-size: "Muli", sans-serif;
+  font-size: 18px;
+  display: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* janela */
+.sobremim ul {
+  display: relative;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.sobremim li {
+  margin-bottom: 200px;
+}
+
+.sobremim a {
+  color: white;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* texo e imagens */
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.container b {
+  color: white;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: yellow;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 300px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel p {
+  text-align: center;
+  font-size: 24px;
+  position: center;
+  bottom: 20px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active p {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-widht: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-last-of-type(4),
+  .panel:nth-last-of-type(5) {
+    display: none;
+  }
+}
